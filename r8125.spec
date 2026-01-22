@@ -15,6 +15,7 @@ URL:            https://www.realtek.com/Download/List?cate_id=584#:~:text=2%2E5G
 BugURL:         https://github.com/makl11/r8125-akmod/issues
 Source0:        %{modname}-%{version}.tar.bz2
 Source1:        LICENSE
+Source2:        modprobe.conf
 
 Provides: %{name}-kmod-common = %{version}
 Requires: %{name}-kmod >= %{version}
@@ -31,6 +32,9 @@ RTL8125BP / RTL8125CP
 
 %build
 head -n32 Makefile | cat - %{SOURCE1} > LICENSE
+
+%install
+install -p -m 0644 %{SOURCE2} %{buildroot}%{_prefix}/lib/modprobe.d/%{modname}.conf
 
 %files
 %doc README
