@@ -37,6 +37,7 @@ mkdir -p %{buildroot}%{_prefix}/lib/modprobe.d/
 install -p -m 0644 %{SOURCE2} %{buildroot}%{_prefix}/lib/modprobe.d/%{modname}.conf
 
 %files
+%defattr(644, root, root, 755)
 %doc README
 %license LICENSE
 %{_prefix}/lib/modprobe.d/%{modname}.conf
