@@ -7,7 +7,7 @@
 Name:           %{modname}
 Version:        9.016.01
 Release:        %autorelease
-Summary:        Realtek %{modname} 2.5GbE PCIE Kernel Driver
+Summary:        Realtek RTL8125 Family 2.5GbE PCIe Kernel Driver
 Group:          System Environment/Kernel
 License:        GPL-2.0-only
 URL:            https://www.realtek.com/Download/List?cate_id=584#:~:text=2%2E5G%20Ethernet%20LINUX%20driver%20r8125
@@ -22,7 +22,7 @@ Requires: %{name}-kmod >= %{version}
 BuildRequires: systemd-rpm-macros
 
 %description
-Realtek r8125 2.5GbE PCIE Kernel Driver
+r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express Network Interface Controllers
 RTL8125 / RTL8125B(G) / RTL8125D / RTL8125K
 RTL8125BP / RTL8125CP
 
