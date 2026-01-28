@@ -1,9 +1,9 @@
-%global modname r8125
-%global _modprobe_d %{_prefix}/lib/modprobe.d/
-%global _sysconf_modprobe_d %{_sysconfdir}/modprobe.d/
+%global         modname                 r8125
+%global         _modprobe_d             %{_prefix}/lib/modprobe.d/
+%global         _sysconf_modprobe_d     %{_sysconfdir}/modprobe.d/
 
 %if 0%{?fedora}
-%global debug_package %{nil}
+%global         debug_package           %{nil}
 %endif
 
 Name:           %{modname}
@@ -20,10 +20,10 @@ Source2:        modprobe.conf
 
 BuildArch:      noarch
 
-Provides: %{name}-kmod-common = %{version}
-Requires: %{name}-kmod >= %{version}
+Provides:       %{name}-kmod-common = %{version}
+Requires:       %{name}-kmod >= %{version}
 
-BuildRequires: systemd-rpm-macros
+BuildRequires:  systemd-rpm-macros
 
 %description
 r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express Network Interface Controllers

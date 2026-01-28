@@ -1,8 +1,9 @@
-%global modname r8125
+%global         modname           r8125
+%global         buildforkernels   akmod
 
-%global buildforkernels akmod
-
-%global debug_package %{nil}
+%if 0%{?fedora}
+%global         debug_package     %{nil}
+%endif
 
 Name:           %{modname}-kmod
 Version:        9.016.01
